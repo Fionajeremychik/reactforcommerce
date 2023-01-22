@@ -1,12 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <h1>This is test page</h1>
+      <h1>This is App component</h1>
     </div>
   );
 }
 
-export default App;
+
