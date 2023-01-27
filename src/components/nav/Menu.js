@@ -1,20 +1,20 @@
+import { NavLink } from "react-router-dom";
 
 
 export default function Menu() {
+    // mb-2 marigin bottom
     return (
-        <ul className="nav">
+        <ul className="nav d-flex justify-content-between shadow-sm mb-2">
             <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">Active</a>
+                <NavLink className="nav-link" aria-current="page" to="/">Home</NavLink>
             </li>
             <li className="nav-item">
-                <a className="nav-link" href="#">Link</a>
+                <NavLink className="nav-link" to="/login">Login</NavLink>
             </li>
             <li className="nav-item">
-                <a className="nav-link" href="#">Link</a>
+                <NavLink className="nav-link" to="/register">Register</NavLink>
             </li>
-            <li className="nav-item">
-                <a className="nav-link disabled">Disabled</a>
-            </li>
+           
         </ul>
     )
 }

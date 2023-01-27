@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// https://medium.com/technology-hits/how-to-run-react-front-end-express-back-end-concurrently-22b9922e5df7
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
