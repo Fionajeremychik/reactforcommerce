@@ -1,10 +1,54 @@
+import { useState } from "react";
 import Jumbotron from "../components/cards/Jumbotron";
 
 // try to pass parameters to Jumbotron component through props
+// offset-md-3 shift md-3 on both sides
 export default function Register() {
-    return (
-      <div>
-        <Jumbotron title="Register" />
+  // state
+  const [name, setName] = useState("Matthew");
+  const [email, setEmail] = useState("chikmatthew@gmail.com");
+  const [password, setPassword] = useState("abc1234");
+  // {(e) => console.log(e)} onChange() to get typing in to use setName() to save it to Name
+  return (
+    <div>
+      <Jumbotron title="Register" />
+      <div className="container mt-5">
+        <div className="row">
+          <div className="col-md-6 offset-md-3">
+            <form>
+              <input
+                type="text"
+                className="form-control mb-4 p-2"
+                placeholder="Enter your name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                autoFocus
+              />
+
+              <input
+                type="email"
+                className="form-control mb-4 p-2"
+                placeholder="Enter your email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+
+              <input
+                type="password"
+                className="form-control mb-4 p-2"
+                placeholder="Enter your password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+
+              <button className="btn btn-primary" type="submit">
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
       </div>
-    );
-  }
+       <pre>{JSON.stringify(name, null, 4)}</pre>
+    </div>
+  );
+}
