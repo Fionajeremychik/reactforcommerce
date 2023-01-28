@@ -4,7 +4,7 @@
 // lead to make the paragraph stand out
 // Use .container-fluid for a full width container, spanning the entire width of the viewport
 // use destructuring from props
-export default function Jumbotron({title, subTitle}) {
+export default function Jumbotron({title, subTitle="Welcome to React E-Commerce"}) {
   return (
     <div
       className="container-fluid jumbotron"
