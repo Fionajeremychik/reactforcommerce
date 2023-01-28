@@ -9,13 +9,25 @@ export default function Register() {
   const [email, setEmail] = useState("chikmatthew@gmail.com");
   const [password, setPassword] = useState("abc1234");
   // {(e) => console.log(e)} onChange() to get typing in to use setName() to save it to Name
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();  // prevent default reloading when click the submit button
+    try {
+      console.log(name, email, password);
+      
+    } catch (err) {
+      console.log(err);
+      
+    }
+  };
+
   return (
     <div>
       <Jumbotron title="Register" />
       <div className="container mt-5">
         <div className="row">
           <div className="col-md-6 offset-md-3">
-            <form>
+            <form onSubmit={handleSubmit}>
               <input
                 type="text"
                 className="form-control mb-4 p-2"
@@ -48,7 +60,7 @@ export default function Register() {
           </div>
         </div>
       </div>
-       <pre>{JSON.stringify(name, null, 4)}</pre>
+       
     </div>
   );
 }
