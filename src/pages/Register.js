@@ -1,5 +1,7 @@
 import { useState } from "react";
 import Jumbotron from "../components/cards/Jumbotron";
+import axios from "axios";
+import toast from "react-hot-toast";
 
 // try to pass parameters to Jumbotron component through props
 // offset-md-3 shift md-3 on both sides
@@ -10,11 +12,17 @@ export default function Register() {
   const [password, setPassword] = useState("abc1234");
   // {(e) => console.log(e)} onChange() to get typing in to use setName() to save it to Name
 
+  console.log(process.env.REACT_APP_AP);
+
   const handleSubmit = async (e) => {
     e.preventDefault();  // prevent default reloading when click the submit button
     try {
-      console.log(name, email, password);
-      
+      const res = await axios.post(`${process.env.REACT_APP_API/register}`, {
+        name, 
+        email, 
+        password
+      });
+      console.log(res);
     } catch (err) {
       console.log(err);
       
