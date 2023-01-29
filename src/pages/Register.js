@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Jumbotron from "../components/cards/Jumbotron";
 import axios from "axios";
-import toast, {Toaster} from "react-hot-toast";
+import toast from "react-hot-toast";
 
 // try to pass parameters to Jumbotron component through props
 // offset-md-3 shift md-3 on both sides
@@ -37,7 +37,6 @@ export default function Register() {
   return (
     <div>
       <Jumbotron title="Register" />
-      <Toaster />
       <div className="container mt-5">
         <div className="row">
           <div className="col-md-6 offset-md-3">
