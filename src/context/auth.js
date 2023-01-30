@@ -1,5 +1,5 @@
 import { useState, createContext, useContext } from "react";
-import axios from "axios";
+//import axios from "axios";
 
 // Context API could be considered a better choice. 
 // At the same time, Redux is better if working on an app with many components,
